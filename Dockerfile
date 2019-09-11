@@ -16,3 +16,5 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
 COPY Gemfile /Gemfile
 COPY Gemfile.lock /Gemfile.lock
 RUN bundle install
+
+RUN mkdir frontend
