@@ -1,4 +1,4 @@
-%h2 Log in
+-# %h2 Log in
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
     = f.label :email
@@ -15,3 +15,62 @@
   .actions
     = f.submit "Log in"
 = render "devise/shared/links"
+
+.container
+  .row
+    .col-md-5.mx-auto
+      #first
+        .myform.form
+          .logo.mb-3
+            .col-md-12.text-center
+              %h1 Login
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .form-group
+              %label{for: "exampleInputEmail1"} Email address
+              %input#email.form-control{"aria-describedby" => "emailHelp", name: "email", placeholder: "Enter email", type: "email"}/
+            .form-group
+              %label{for: "exampleInputEmail1"} Password
+              %input#password.form-control{"aria-describedby" => "emailHelp", name: "password", placeholder: "Enter Password", type: "password"}/
+            .form-group
+              %p.text-center
+                By signing up you accept our
+                %a{href: "#"} Terms Of Use
+            .col-md-12.text-center
+              %button.btn.btn-block.mybtn.btn-primary.tx-tfm{type: "submit"} Login
+            .col-md-12
+              .login-or
+                %hr.hr-or/
+                %span.span-or or
+            .col-md-12.mb-3
+              %p.text-center
+                %a.google.btn.mybtn{href: "javascript:void();"}
+                  %i.fa.fa-google-plus
+                  Signup using Google
+            .form-group
+              %p.text-center
+                Don't have account?
+                %a#signup{href: "#"} Sign up here
+      #second
+        .myform.form
+          .logo.mb-3
+            .col-md-12.text-center
+              %h1 Signup
+          %form{action: "#", name: "registration"}
+            .form-group
+              %label{for: "exampleInputEmail1"} First Name
+              %input#firstname.form-control{"aria-describedby" => "emailHelp", name: "firstname", placeholder: "Enter Firstname", type: "text"}/
+            .form-group
+              %label{for: "exampleInputEmail1"} Last Name
+              %input#lastname.form-control{"aria-describedby" => "emailHelp", name: "lastname", placeholder: "Enter Lastname", type: "text"}/
+            .form-group
+              %label{for: "exampleInputEmail1"} Email address
+              %input#email.form-control{"aria-describedby" => "emailHelp", name: "email", placeholder: "Enter email", type: "email"}/
+            .form-group
+              %label{for: "exampleInputEmail1"} Password
+              %input#password.form-control{"aria-describedby" => "emailHelp", name: "password", placeholder: "Enter Password", type: "password"}/
+            .col-md-12.text-center.mb-3
+              %button.btn.btn-block.mybtn.btn-primary.tx-tfm{type: "submit"} Get Started For Free
+            .col-md-12
+              .form-group
+                %p.text-center
+                  %a#signin{href: "#"} Already have an account?
