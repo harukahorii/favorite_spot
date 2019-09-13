@@ -19,6 +19,10 @@ services:
       - mysql
     working_dir: "/app"
 
-
-  
-    
+  webpacker:
+    build: .
+    command: bundle exec bin/webpack-dev-server
+    volumes:
+      - .:/favorite_spot
+    ports:
+      - "8000:8000"
