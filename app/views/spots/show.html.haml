@@ -6,23 +6,23 @@
     %figure.building
       = image_tag 'city_side.png'
 
-  %form.show_spot
-    %label.post_label
-      %p.label-txt オススメスポット
-      %input.input{type: "text"}/
+  .show_spot
+    .post_label
+      %h2.text-uppercase.mt-3.font-weight-bold.text-grey little star cafeの詳細
       .line-box
         .line
-    %label.post_label
-      %p.label-txt 写真
-      %input.input{type: "file"}/
+    .post_label
+      .city_cafe
+      %figure.good_cafe
+        = image_tag 'stylish_cafe.png'
       .line-box
         .line
-    %label.post_label
-      %p.label-txt オススメのポイント
-      = text_area :text, class: 'input' 'text_area'
+    .post_label
+      %h3.text-uppercase.mt-3.font-weight-bold.text-grey みゆきさんのおすすめポイント
+      %p.label-txt 代官山のオススメのカフェです。代官山駅から歩いて2分ほどと駅近。パリの街角にあるカフェのような外観に、味への期待が高まります。
       .line-box
         .line
-    %button{type: "submit"} 投稿する
+    %button{type: "submit"} コメントを投稿する
   
   .city_side
     %figure.building
