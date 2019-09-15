@@ -1,0 +1,21 @@
+.top-container
+  = render partial: 'common/header'
+
+.main
+    %form.post_form
+      %label.post_label
+        %p.label-txt オススメスポット
+        %input.input{type: "text"}/
+        .line-box
+          .line
+      %label.post_label
+        %p.label-txt 写真
+        %input.input{type: "file"}/
+        .line-box
+          .line
+      %label.post_label
+        %p.label-txt オススメのポイント
+        = text_area :text, class: 'input' 'text_area'
+        .line-box
+          .line
+      %button{type: "submit"} 投稿する
