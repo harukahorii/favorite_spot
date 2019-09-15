@@ -1,3 +1,22 @@
-.top-container
-  = render partial: 'common/header'
-  
+.wrapper
+  .top-container
+    = render partial: 'common/header'
+
+
+  %form.post_form
+    %label.post_label
+      %p.label-txt ENTER YOUR EMAIL
+      %input.input{type: "text"}/
+      .line-box
+        .line
+    %label.post_label
+      %p.label-txt ENTER YOUR NAME
+      %input.input{type: "text"}/
+      .line-box
+        .line
+    %label.post_label
+      %p.label-txt ENTER YOUR PASSWORD
+      %input.input{type: "text"}/
+      .line-box
+        .line
+    %button{type: "submit"} submit
