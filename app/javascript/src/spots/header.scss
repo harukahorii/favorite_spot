@@ -82,7 +82,28 @@ a {
 
 .good_logo {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.logo-img {
+  font-family: 'brandon-grotesque';
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding-left: 40px;
+  color: #fff!important;
+  a {
+    color: #fff!important;
+  }
+}
+
+.col-xl-2 {
+  display: flex;
 }
