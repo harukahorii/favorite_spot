@@ -2,6 +2,10 @@
   = render partial: 'common/header'
 
 .main
+  .city_side
+    %figure.building
+      = image_tag 'city_side.png'
+
   %form.show_spot
     %label.post_label
       %p.label-txt オススメスポット
@@ -19,3 +23,7 @@
       .line-box
         .line
     %button{type: "submit"} 投稿する
+  
+  .city_side
+    %figure.building
+      = image_tag 'city_side.png'

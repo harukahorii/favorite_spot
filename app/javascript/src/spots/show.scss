@@ -1,9 +1,16 @@
 .show_spot {
   width: 60%;
-  margin: 0 auto;
+  margin: 0;
   background: #efefef;
   padding: 50px 100px 50px 100px;
   text-align: center;
   -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
   box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+
+.building {
+  display: inline-block;
+  width: 280px;
+  overflow: hidden;
+  background-size: cover; 
 }
