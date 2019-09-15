@@ -3,7 +3,7 @@
   width: 60%;
   margin: 0;
   background: #efefef;
-  padding: 60px 100px 80px 100px;
+  padding: 50px 100px 50px 100px;
   text-align: center;
   -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
   box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
@@ -85,6 +85,7 @@ textarea {
   display: inline-block;
   width: 600px;
   overflow: hidden;
+  background-size: cover; 
 }
 
 .main {
