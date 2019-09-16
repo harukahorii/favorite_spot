@@ -122,7 +122,6 @@ input[type=checkbox] {
   display: block;
   margin: 10px auto;
   border-radius: 3px;
-  // color: #3e98bb;
   text-decoration: none;
 }
 
@@ -139,4 +138,13 @@ label {
   padding: 10px 0;
   font-size: 12px;
   font-weight: bold;
+}
+
+.map-box {
+  width: 800px;
+}
+
+#map {
+  width: 800px;
+  height: 400px;
 }
