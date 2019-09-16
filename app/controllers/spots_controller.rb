@@ -1,7 +1,7 @@
 class SpotsController < ApplicationController
   before_action :set_map, only: [:show, :edit, :update, :destroy]
   def index
-    spots =Spot.all
+    @spots =Spot.all
     @hash = Gmaps4rails.build_markers(@maps) do |map, marker|
     marker.lat map.latitude
     marker.lng map.longitude

@@ -1,13 +1,28 @@
 .top-container
   = render partial: 'common/header'
 
+
+%p#notice= notice
+%h1 Maps
+%table
+  %thead
+    %tr
+      %th Name
+      %th Latitude
+      %th Longitude
+      %th{colspan: "3"}
+  %tbody
+    - @spots.each do |spot|
+      %tr
+        %td= spot.name
+        %td= spot.latitude
+        %td= spot.longitude
+        %td= link_to 'Show', spot
+        %td= link_to 'Edit', edit_spot_path(spot)
+        %td= link_to 'Destroy', spot, method: :delete, data: { confirm: 'Are you sure?' }
+%br
+
 .map-box
   #map
-
-:javascript
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(#{raw @hash.to_json});
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-  });
+  %p
+    = image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{35.6751},#{139.763}&key=#{'Rails.application.credentials.google_maps_static_api_key'}", alt: "Map"
