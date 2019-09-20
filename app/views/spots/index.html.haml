@@ -25,4 +25,5 @@
 .map-box
   #map
   %p
-    = image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{35.6751},#{139.763}&key=#{Rails.application.credentials.google_maps_static_api_key}", alt: "Map"
+    -# = image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{35.6751},#{139.763}&key=#{Rails.application.credentials.google_maps_static_api_key}", alt: "Map"
+    = image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{35.6751},#{139.763}&key=#{Rails.application.credentials.google_maps_static_api_key}", alt: "Map"
