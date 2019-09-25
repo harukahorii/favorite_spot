@@ -17,17 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(app)
 })
 
-function initMap(lat, lng) {
-  var myCoords = new google.maps.Latalng(lat, lng);
-
-  var mapOptions = {
-  center: myCoords,
-  zoom: 14
-  };
-
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-}
-
 
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would
