@@ -1,3 +1,4 @@
+= javascript_pack_tag 'spots'
 .top-container
   = render partial: 'common/header'
 
@@ -22,15 +23,15 @@
         %td= link_to 'Destroy', spot, method: :delete, data: { confirm: 'Are you sure?' }
 %br
 
+
 .map-box
   %p
     #map
-  %p
     -# = image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&center=#{35.6751},#{139.763}&key=#{Rails.application.credentials.google_maps_static_api_key}", alt: "Map"
     -# = image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{35.6751},#{139.763}&key=#{Rails.application.credentials.google_maps_static_api_key}", alt: "Map"
 
--# - provide :head_tags do
--#   :javascript
--#     document.addEventListener("DOMContentLoaded", function() {
--#       initMap(#{spot.latitude}, #{spot.longitude})
--#     });
+- provide :head_tags do
+  :javascript
+    document.addEventListener("DOMContentLoaded", function() {
+      initMap(#{35.6751}, #{35.6751})
+    });
